@@ -3,6 +3,7 @@ import { ArrowRight, Code2, Shield, Zap } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { EacEcosystemDiagram } from "@/components/eac-ecosystem-diagram"
+import { EacSchemaDisplay } from "@/components/eac-schema-display"
 
 export default function HomePage() {
   return (
@@ -38,30 +39,36 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#FF00FF]/10 via-transparent to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-          {/* Main Heading */}
-          <div className="max-w-4xl">
-            <h2 className="text-5xl font-bold leading-tight tracking-tight text-balance sm:text-6xl lg:text-7xl text-left">
-              Everything as Code
-            </h2>
-            <p className="mt-4 text-2xl font-medium text-[#00FFFF] text-balance sm:text-3xl text-left">
-              The operating model for AI-built software systems
-            </p>
-            <p className="mt-8 max-w-3xl text-lg text-gray-300 leading-relaxed text-pretty sm:text-xl text-left">
-              AI can now assemble software faster than teams can reason about the systems they are creating. Everything
-              as Code is the operating model that makes AI-built systems deployable, governable, and enterprise-ready —
-              without slowing down creation.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Main Heading */}
+            <div className="max-w-4xl">
+              <h2 className="text-5xl font-bold leading-tight tracking-tight text-balance sm:text-6xl lg:text-7xl text-left">
+                Everything as Code
+              </h2>
+              <p className="mt-4 text-2xl font-medium text-[#00FFFF] text-balance sm:text-3xl text-left">
+                The operating model for AI-built software systems
+              </p>
+              <p className="mt-8 max-w-3xl text-lg text-gray-300 leading-relaxed text-pretty sm:text-xl text-left">
+                AI can now assemble software faster than teams can reason about the systems they are creating.
+                Everything as Code is the operating model that makes AI-built systems deployable, governable, and
+                enterprise-ready — without slowing down creation.
+              </p>
 
-            <div className="mt-12 flex flex-wrap gap-4">
-              <Link href="/everything-as-code">
-                <Button
-                  size="lg"
-                  className="bg-[#00FFFF] text-black hover:bg-[#00FFFF]/90 text-base font-semibold px-8 text-left"
-                >
-                  Explore Everything as Code
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+              <div className="mt-12 flex flex-wrap gap-4">
+                <Link href="/everything-as-code">
+                  <Button
+                    size="lg"
+                    className="bg-[#00FFFF] text-black hover:bg-[#00FFFF]/90 text-base font-semibold px-8 text-left"
+                  >
+                    Explore Everything as Code
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="hidden lg:block">
+              <EacSchemaDisplay />
             </div>
           </div>
         </div>
@@ -80,10 +87,14 @@ export default function HomePage() {
               AI changed how code is created, but not how software systems are built
             </h3>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed text-pretty text-left">
-              AI tools have made writing code easier and faster than ever. But actually making use of that code is another story. Production systems are still assembled through fragmented configuration, environment-specific scripts, and user-held context. The result is a growing gap between creation speed and system-level control.
+              AI tools have made writing code easier and faster than ever. But actually making use of that code is
+              another story. Production systems are still assembled through fragmented configuration,
+              environment-specific scripts, and user-held context. The result is a growing gap between creation speed
+              and system-level control.
             </p>
             <p className="mt-4 text-lg text-gray-300 leading-relaxed text-pretty text-left">
-              AI can generate code — but it lacks full context and understanding of where that code runs, how it's governed, and how it's allowed to evolve.
+              AI can generate code — but it lacks full context and understanding of where that code runs, how it's
+              governed, and how it's allowed to evolve.
             </p>
           </div>
 
@@ -143,7 +154,8 @@ export default function HomePage() {
               It is not another tool in the stack. It is the system definition the stack runs within.
             </p>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed text-left">
-              EaC is the shared operating model that both humans and AI can understand, reason about, and safely modify — whether assembling systems from scratch or evolving them over time.
+              EaC is the shared operating model that both humans and AI can understand, reason about, and safely modify
+              — whether assembling systems from scratch or evolving them over time.
             </p>
           </div>
 
@@ -192,10 +204,13 @@ export default function HomePage() {
               </div>
               <h3 className="mt-6 text-3xl font-bold text-white sm:text-4xl">Agentic AI orchestration</h3>
               <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-                Synaptic extends Everything as Code to define how AI agents operate inside your system — their permissions, data access, and operational boundaries.
+                Synaptic extends Everything as Code to define how AI agents operate inside your system — their
+                permissions, data access, and operational boundaries.
               </p>
               <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-                By integrating through the Model Context Protocol (MCP), Synaptic allows any AI tool to participate as a first-class, governed actor rather than an external automation. AI executes workflows, reasons over system state, and proposes change — within constraints defined by the system itself. 
+                By integrating through the Model Context Protocol (MCP), Synaptic allows any AI tool to participate as a
+                first-class, governed actor rather than an external automation. AI executes workflows, reasons over
+                system state, and proposes change — within constraints defined by the system itself.
               </p>
               <div className="mt-8">
                 <Link href="/synaptic">
@@ -218,7 +233,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A] to-black" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <h3 className="mb-16 text-4xl font-bold text-white sm:text-5xl text-left">What changes when software has a system contract</h3>
+          <h3 className="mb-16 text-4xl font-bold text-white sm:text-5xl text-left">
+            What changes when software has a system contract
+          </h3>
 
           <div className="grid gap-12 lg:grid-cols-3">
             {/* Development Teams */}
@@ -302,7 +319,8 @@ export default function HomePage() {
               <p className="mt-6 text-lg text-gray-300 leading-relaxed">
                 Fathym's EaC model powers production systems today, including{" "}
                 <span className="font-semibold text-[#FF00FF]">Open Industrial</span>, a platform for governed AI in
-                industrial and operational environments where reliabilit, traceability and accountability are non-negotiable.
+                industrial and operational environments where reliabilit, traceability and accountability are
+                non-negotiable.
               </p>
               <div className="mt-8">
                 <Button
