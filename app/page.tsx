@@ -14,51 +14,59 @@ export default function HomePage() {
             <div className="relative h-10 w-10">
               <Image src="/images/thinky-white.png" alt="Fathym" fill className="object-contain" />
             </div>
-            <span className="text-2xl font-bold text-[#00FFFF]">Fathym</span>
+            <span className="text-xl sm:text-2xl font-bold text-[#00FFFF]">Fathym</span>
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             <Link
               href="/everything-as-code"
-              className="text-sm font-medium text-gray-300 transition-colors hover:text-[#00FFFF]"
+              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#00FFFF]"
             >
               Everything as Code
             </Link>
-            <Link href="/synaptic" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FF00FF]">
+            <Link
+              href="/synaptic"
+              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#FF00FF]"
+            >
               Synaptic
+            </Link>
+            <Link
+              href="/ftm-cli"
+              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#FFFF00]"
+            >
+              FTM CLI
             </Link>
           </div>
         </div>
       </nav>
-      {/* </CHANGE> */}
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-24 sm:pt-32">
         {/* Gradient Background Effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0E7490]/20 via-black to-[#7C3AED]/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#00FFFF]/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#FF00FF]/10 via-transparent to-transparent" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative mx-auto w-full max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Main Heading */}
             <div className="max-w-4xl">
-              <h2 className="text-5xl font-bold leading-tight tracking-tight text-balance sm:text-6xl lg:text-7xl text-left">
+              <h2 className="text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-7xl">
                 Everything as Code
               </h2>
-              <p className="mt-4 text-2xl font-medium text-[#00FFFF] text-balance sm:text-3xl text-left">
+              <p className="mt-4 text-lg font-medium text-[#00FFFF] text-balance sm:text-2xl lg:text-3xl">
                 The operating model for AI-built software systems
               </p>
-              <p className="mt-8 max-w-3xl text-lg text-gray-300 leading-relaxed text-pretty sm:text-xl text-left">
+              <p className="mt-6 max-w-3xl text-base text-gray-300 leading-relaxed text-pretty sm:text-lg">
                 AI can now assemble software faster than teams can reason about the systems they are creating.
                 Everything as Code is the operating model that makes AI-built systems deployable, governable, and
                 enterprise-ready — without slowing down creation.
               </p>
 
-              <div className="mt-12 flex flex-wrap gap-4">
+              <div className="mt-8 sm:mt-12 flex flex-wrap gap-4">
                 <Link href="/everything-as-code">
                   <Button
                     size="lg"
-                    className="bg-[#00FFFF] text-black hover:bg-[#00FFFF]/90 text-base font-semibold px-8 text-left"
+                    className="bg-[#00FFFF] text-black hover:bg-[#00FFFF]/90 text-sm sm:text-base font-semibold px-6 sm:px-8"
                   >
                     Explore Everything as Code
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -67,7 +75,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex justify-center">
               <EacSchemaDisplay />
             </div>
           </div>
@@ -75,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* EaC Ecosystem Diagram Section */}
-      <section className="relative border-t border-white/10">
+      <section className="relative border-t border-white/10 overflow-x-auto">
         <EacEcosystemDiagram />
       </section>
 

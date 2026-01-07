@@ -13,19 +13,25 @@ export default function EverythingAsCodePage() {
             <div className="relative h-10 w-10">
               <Image src="/images/thinky-white.png" alt="Fathym" fill className="object-contain" />
             </div>
-            <span className="text-2xl font-bold text-[#00FFFF]">Fathym</span>
+            <span className="text-xl sm:text-2xl font-bold text-[#00FFFF]">Fathym</span>
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             <Link
               href="/everything-as-code"
-              className="text-sm font-medium text-[#00FFFF] transition-colors hover:text-[#00FFFF]/80"
+              className="text-xs sm:text-sm font-medium text-[#00FFFF] transition-colors hover:text-[#00FFFF]/80"
             >
               Everything as Code
             </Link>
-            <Link href="/synaptic" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FF00FF]">
+            <Link
+              href="/synaptic"
+              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#FF00FF]"
+            >
               Synaptic
             </Link>
-            <Link href="/ftm-cli" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FFFF00]">
+            <Link
+              href="/ftm-cli"
+              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#FFFF00]"
+            >
               FTM CLI
             </Link>
           </div>
@@ -33,26 +39,26 @@ export default function EverythingAsCodePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-24 sm:pt-32">
         {/* Gradient Background Effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0E7490]/20 via-black to-[#7C3AED]/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#00FFFF]/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#FFFF00]/10 via-transparent to-transparent" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div className="relative mx-auto w-full max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-40">
           {/* Main Heading */}
           <div className="max-w-4xl">
-            <h2 className="text-5xl font-bold leading-tight tracking-tight text-balance sm:text-6xl lg:text-7xl">
+            <h2 className="text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-7xl">
               Everything as Code
             </h2>
-            <p className="mt-4 text-2xl font-medium text-[#FFFF00] text-balance sm:text-3xl">
+            <p className="mt-4 text-lg font-medium text-[#FFFF00] text-balance sm:text-2xl lg:text-3xl">
               Assembling software in the age of AI
             </p>
-            <p className="mt-8 max-w-3xl text-lg text-gray-300 leading-relaxed text-pretty">
+            <p className="mt-6 max-w-3xl text-base text-gray-300 leading-relaxed text-pretty sm:text-lg">
               Software systems are no longer built one application at a time. They are assembled from runtimes,
               services, workflows, data sources, identity systems, and increasingly, AI-driven logic.
             </p>
-            <p className="mt-4 max-w-3xl text-lg text-white font-medium">
+            <p className="mt-4 max-w-3xl text-base text-white font-medium sm:text-lg">
               Everything as Code (EaC) defines how these parts come together – declaratively and explicitly – as
               coherent and future-proof systems.
             </p>
@@ -61,8 +67,8 @@ export default function EverythingAsCodePage() {
       </section>
 
       {/* Architecture Diagram Section */}
-      <section className="relative">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+      <section className="relative overflow-x-auto">
+        <div className="mx-auto w-full min-w-max px-6 py-24 lg:px-8 lg:py-32">
           <FathymArchitectureDiagram />
         </div>
       </section>
