@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Brain, Shield, Workflow, Lock, Cloud, Layers } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import SynapticGovernanceDiagram from "@/components/SynapticGovernanceDiagram"
 
 export default function SynapticPage() {
   return (
@@ -62,6 +63,9 @@ export default function SynapticPage() {
           </div>
         </div>
       </section>
+
+      {/* Synaptic Governance Diagram */}
+      <SynapticGovernanceDiagram />
 
       {/* The Gap Section */}
       <section className="relative border-t border-white/10 bg-gradient-to-b from-black to-[#0F172A]">
