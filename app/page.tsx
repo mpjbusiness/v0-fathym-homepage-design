@@ -18,7 +18,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#FF00FF]/10 via-transparent to-transparent" />
 
         <div className="relative mx-auto w-full max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-40">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Main Heading */}
             <div className="max-w-4xl">
               <h2 className="text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-7xl">
@@ -46,15 +46,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hidden lg:flex justify-center">
-              <EacSchemaDisplay />
+            <div className="flex justify-center w-full overflow-hidden">
+              <div className="w-full max-w-md sm:max-w-lg lg:max-w-2xl scale-75 sm:scale-90 lg:scale-100 origin-center">
+                <EacSchemaDisplay />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* EaC Ecosystem Diagram Section */}
-      <section className="relative border-t border-white/10 overflow-x-auto">
+      <section className="relative border-t border-white/10 overflow-hidden">
         <EacEcosystemDiagram />
       </section>
 
