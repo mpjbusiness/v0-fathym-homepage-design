@@ -27,6 +27,9 @@ export default function SynapticPage() {
             >
               Synaptic
             </Link>
+            <Link href="/ftm-cli" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FFFF00]">
+              FTM CLI
+            </Link>
           </div>
         </div>
       </nav>
@@ -310,7 +313,7 @@ export default function SynapticPage() {
 
           <div className="mt-12 rounded-2xl border border-[#00FFFF]/30 bg-gradient-to-br from-[#0E7490]/20 to-black p-8 lg:p-12">
             <h4 className="text-2xl font-bold text-white mb-6">What this allows Synaptic to move AI execution</h4>
-            
+
             <ul className="space-y-3 text-lg text-gray-300">
               <li className="flex items-start gap-3">
                 <span className="text-[#00FFFF] font-bold">•</span>

@@ -25,6 +25,9 @@ export default function EverythingAsCodePage() {
             <Link href="/synaptic" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FF00FF]">
               Synaptic
             </Link>
+            <Link href="/ftm-cli" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FFFF00]">
+              FTM CLI
+            </Link>
           </div>
         </div>
       </nav>
