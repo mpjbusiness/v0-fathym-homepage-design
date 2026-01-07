@@ -1,43 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code2, Shield, Zap } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 import { EacEcosystemDiagram } from "@/components/eac-ecosystem-diagram"
 import { EacSchemaDisplay } from "@/components/eac-schema-display"
+import Navbar from "@/components/Navbar"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="relative h-10 w-10">
-              <Image src="/images/thinky-white.png" alt="Fathym" fill className="object-contain" />
-            </div>
-            <span className="text-xl sm:text-2xl font-bold text-[#00FFFF]">Fathym</span>
-          </Link>
-          <div className="flex items-center gap-3 sm:gap-6">
-            <Link
-              href="/everything-as-code"
-              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#00FFFF]"
-            >
-              Everything as Code
-            </Link>
-            <Link
-              href="/synaptic"
-              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#FF00FF]"
-            >
-              Synaptic
-            </Link>
-            <Link
-              href="/ftm-cli"
-              className="text-xs sm:text-sm font-medium text-gray-300 transition-colors hover:text-[#FFFF00]"
-            >
-              FTM CLI
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar currentPage="home" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 sm:pt-32">

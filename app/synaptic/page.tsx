@@ -1,41 +1,16 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Brain, Shield, Workflow, Lock, Cloud, Layers } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 import SynapticGovernanceDiagram from "@/components/SynapticGovernanceDiagram"
+import Navbar from "@/components/Navbar"
 
 export default function SynapticPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="relative h-10 w-10">
-              <Image src="/images/thinky-white.png" alt="Fathym" fill className="object-contain" />
-            </div>
-            <span className="text-2xl font-bold text-[#00FFFF]">Fathym</span>
-          </Link>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/everything-as-code"
-              className="text-sm font-medium text-gray-300 transition-colors hover:text-[#00FFFF]"
-            >
-              Everything as Code
-            </Link>
-            <Link
-              href="/synaptic"
-              className="text-sm font-medium text-[#FF00FF] transition-colors hover:text-[#FF00FF]/80"
-            >
-              Synaptic
-            </Link>
-            <Link href="/ftm-cli" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FFFF00]">
-              FTM CLI
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar currentPage="synaptic" />
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-24 sm:pt-32">
         {/* Gradient Background Effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#7C3AED]/20 via-black to-[#0E7490]/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#FF00FF]/10 via-transparent to-transparent" />

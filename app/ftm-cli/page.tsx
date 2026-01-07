@@ -1,42 +1,16 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, CheckCircle2, Shield, Zap, Eye, Lock } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
-import FtmCliDiagram from "@/components/FtmCliDiagram" // Assuming FtmCliDiagram is imported from this path
+import FtmCliDiagram from "@/components/FtmCliDiagram"
+import Navbar from "@/components/Navbar"
 
 export default function FtmCliPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="relative h-10 w-10">
-              <Image src="/images/thinky-white.png" alt="Fathym" fill className="object-contain" />
-            </div>
-            <span className="text-2xl font-bold text-[#00FFFF]">Fathym</span>
-          </Link>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/everything-as-code"
-              className="text-sm font-medium text-gray-300 transition-colors hover:text-[#00FFFF]"
-            >
-              Everything as Code
-            </Link>
-            <Link href="/synaptic" className="text-sm font-medium text-gray-300 transition-colors hover:text-[#FF00FF]">
-              Synaptic
-            </Link>
-            <Link
-              href="/ftm-cli"
-              className="text-sm font-medium text-[#FFFF00] transition-colors hover:text-[#FFFF00]/80"
-            >
-              FTM CLI
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar currentPage="ftm-cli" />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20">
+      <section className="relative overflow-hidden pt-24 sm:pt-32">
         {/* Gradient Background Effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#CA8A04]/20 via-black to-[#7C3AED]/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#FFFF00]/10 via-transparent to-transparent" />
@@ -68,7 +42,8 @@ export default function FtmCliPage() {
           <div className="mb-12 max-w-4xl">
             <h3 className="text-3xl font-bold text-white sm:text-4xl">FTM CLI governs AI-driven change</h3>
             <p className="mt-4 text-lg text-gray-300">
-              FTM CLI implements a stage-gated workflow where every change — AI-proposed or human-initiated —passes through explicit approval gates before execution.
+              FTM CLI implements a stage-gated workflow where every change — AI-proposed or human-initiated —passes
+              through explicit approval gates before execution.
             </p>
           </div>
           <FtmCliDiagram />
