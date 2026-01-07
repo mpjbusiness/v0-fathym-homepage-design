@@ -184,6 +184,154 @@ export default function SynapticPage() {
         </div>
       </section>
 
+      {/* Neurons and Circuits Section */}
+      <section className="relative border-t border-white/10 bg-gradient-to-b from-[#0F172A] via-black to-black">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="mb-16 max-w-4xl">
+            <h3 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl">Neurons and Circuits</h3>
+            <p className="mt-6 text-lg text-[#FF00FF] font-semibold">
+              Synaptic structures AI execution using two core primitives: neurons and circuits.
+            </p>
+          </div>
+
+          <div className="grid gap-12 lg:grid-cols-2">
+            {/* Left Column */}
+            <div className="space-y-8">
+              <div>
+                <h4 className="text-2xl font-bold text-[#00FFFF] mb-4">Neurons</h4>
+                <p className="text-lg text-gray-300 leading-relaxed mb-4">
+                  Small, focused units of AI behavior — such as prompting, reasoning, or invoking a capability. Each
+                  neuron has defined inputs, outputs, and scope.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-2xl font-bold text-[#FF00FF] mb-4">Circuits</h4>
+                <p className="text-lg text-gray-300 leading-relaxed mb-4">
+                  Compose neurons into explicit execution flows. They define how AI behavior progresses, how state
+                  moves, and where decisions are made.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#00FFFF]/30 bg-gradient-to-br from-[#0E7490]/20 to-black p-8">
+                <h4 className="text-xl font-bold text-white mb-4">This structure makes AI workflows</h4>
+                <ul className="space-y-3 text-lg text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00FFFF] font-bold">•</span>
+                    <span>Explicit rather than implicit</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00FFFF] font-bold">•</span>
+                    <span>Composable rather than entangled</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00FFFF] font-bold">•</span>
+                    <span>Reusable across systems</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00FFFF] font-bold">•</span>
+                    <span>Governable by design</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-8">
+              <div className="rounded-2xl border border-[#FF00FF]/30 bg-gradient-to-br from-[#7C3AED]/20 to-black p-8 lg:p-12">
+                <h4 className="text-2xl font-bold text-[#FF00FF] mb-6">Circuits are system artifacts</h4>
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  In Synaptic, circuits are declared as part of Everything as Code.
+                </p>
+                <p className="text-lg text-white font-semibold mb-6">That means AI workflows can be</p>
+                <ul className="space-y-3 text-lg text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#FF00FF] font-bold">•</span>
+                    <span>Versioned and reviewed</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#FF00FF] font-bold">•</span>
+                    <span>Executed under identity and policy</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#FF00FF] font-bold">•</span>
+                    <span>Audited like any other system component</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#FF00FF] font-bold">•</span>
+                    <span>Reused across environments and runtimes</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Circuit Diagram */}
+              <div className="rounded-2xl border border-[#FFFF00]/30 bg-gradient-to-br from-[#78350F] to-black p-8">
+                <svg className="w-full" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  {/* Circuit label at bottom */}
+                  <text x="150" y="190" textAnchor="middle" className="text-xs" fill="#FFFF00" fontSize="12">
+                    └────────────── Circuit ──────────────┘
+                  </text>
+
+                  {/* Neuron boxes */}
+                  <rect x="10" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
+                  <text x="45" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
+                    Neuron
+                  </text>
+                  <text x="45" y="95" textAnchor="middle" fill="#999999" fontSize="11">
+                    (Input)
+                  </text>
+
+                  <rect x="115" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
+                  <text x="150" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
+                    Neuron
+                  </text>
+                  <text x="150" y="95" textAnchor="middle" fill="#999999" fontSize="11">
+                    (Reason)
+                  </text>
+
+                  <rect x="220" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
+                  <text x="255" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
+                    Neuron
+                  </text>
+                  <text x="255" y="95" textAnchor="middle" fill="#999999" fontSize="11">
+                    (Action)
+                  </text>
+
+                  {/* Arrows connecting neurons */}
+                  <line x1="80" y1="90" x2="115" y2="90" stroke="#FF00FF" strokeWidth="2" />
+                  <polygon points="115,90 110,87 110,93" fill="#FF00FF" />
+
+                  <line x1="185" y1="90" x2="220" y2="90" stroke="#FF00FF" strokeWidth="2" />
+                  <polygon points="220,90 215,87 215,93" fill="#FF00FF" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-[#00FFFF]/30 bg-gradient-to-br from-[#0E7490]/20 to-black p-8 lg:p-12">
+            <h4 className="text-2xl font-bold text-white mb-6">What this allows Synaptic to move AI execution</h4>
+            
+            <ul className="space-y-3 text-lg text-gray-300">
+              <li className="flex items-start gap-3">
+                <span className="text-[#00FFFF] font-bold">•</span>
+                <span>Between systems</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#00FFFF] font-bold">•</span>
+                <span>Across environments</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#00FFFF] font-bold">•</span>
+                <span>Without losing control or context</span>
+              </li>
+            </ul>
+            <div className="mt-6 rounded-xl border border-[#00FFFF]/40 bg-black/50 p-6">
+              <p className="text-lg text-white font-semibold">AI operates inside the system model, not alongside it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Integration Section */}
       <section className="relative border-t border-white/10 bg-gradient-to-b from-black to-[#0F172A]">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
@@ -317,7 +465,7 @@ export default function SynapticPage() {
           <div className="max-w-4xl">
             <h3 className="text-4xl font-bold text-white sm:text-5xl">Portable by design</h3>
             <p className="mt-6 text-lg text-[#FFFF00] font-semibold">
-              Synaptic defines circuits as portable EaC artifacts that execute across environments. 
+              Synaptic defines circuits as portable Everything-as-Code artifacts that execute across environments.
             </p>
           </div>
 
@@ -337,7 +485,8 @@ export default function SynapticPage() {
           </div>
 
           <p className="mt-12 text-lg text-gray-300 max-w-3xl">
-            One Synaptic circuit can run simultaneously across different runtimes. 
+            Because circuits declare intent, structure, and boundaries, execution adapts to the runtime without changing
+            the workflow. One Synaptic circuit can run simultaneously across different runtimes.
           </p>
         </div>
       </section>
@@ -361,7 +510,9 @@ export default function SynapticPage() {
               <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#FF00FF]/20 text-lg font-bold text-[#FF00FF]">
                 2
               </span>
-              <p className="text-lg text-gray-300">Stewardship validates intent, policy, and scope, and resolves the execution graph</p>
+              <p className="text-lg text-gray-300">
+                Stewardship validates intent, policy, and scope, and resolves the execution graph
+              </p>
             </div>
 
             <div className="flex items-start gap-4 rounded-xl border border-[#FF00FF]/30 bg-gradient-to-r from-[#581C87]/20 to-black p-6">
