@@ -16,7 +16,7 @@ export default function FathymArchitectureDiagram() {
             }}
           >
             {/* AI Code Generation Box */}
-            <rect x="150" y="20" width="500" height="80" fill="none" stroke="#FF00FF" strokeWidth="2" rx="4" />
+            <rect x="100" y="20" width="600" height="80" fill="none" stroke="#FF00FF" strokeWidth="2" rx="4" />
             <text x="400" y="50" textAnchor="middle" fill="#FF00FF" fontSize="16" fontWeight="bold">
               AI CODE GENERATION
             </text>

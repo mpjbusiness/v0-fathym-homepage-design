@@ -28,11 +28,10 @@ export default function SynapticPage() {
             <p className="mt-8 max-w-3xl text-lg text-gray-300 leading-relaxed text-pretty">
               AI can generate code, execute workflows, reason over data, makes decisions, and propose updates.
             </p>
-            <p className="mt-6 text-lg text-white font-semibold">The challenge is not enabling AI execution.</p>
-            <p className="mt-2 text-lg text-[#FF00FF] font-semibold">
-              The challenge is enabling AI execution as part of a system.
+            <p className="mt-6 text-lg text-white font-semibold">
+              The challenge is not enabling AI execution. The challenge is enabling AI execution as part of a system.
             </p>
-            <p className="mt-6 text-lg text-gray-300">
+            <p className="mt-2 text-lg text-[#FF00FF] font-semibold">
               Synaptic makes AI execution composable, governed, and system-aware.
             </p>
           </div>
@@ -245,53 +244,57 @@ export default function SynapticPage() {
                   </li>
                 </ul>
               </div>
-
-              {/* Circuit Diagram */}
-              <div className="rounded-2xl border border-[#FFFF00]/30 bg-gradient-to-br from-[#78350F] to-black p-8">
-                <svg className="w-full" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                  {/* Circuit label at bottom */}
-                  <text x="150" y="190" textAnchor="middle" className="text-xs" fill="#FFFF00" fontSize="12">
-                    └────────────── Circuit ──────────────┘
-                  </text>
-
-                  {/* Neuron boxes */}
-                  <rect x="10" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
-                  <text x="45" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
-                    Neuron
-                  </text>
-                  <text x="45" y="95" textAnchor="middle" fill="#999999" fontSize="11">
-                    (Input)
-                  </text>
-
-                  <rect x="115" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
-                  <text x="150" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
-                    Neuron
-                  </text>
-                  <text x="150" y="95" textAnchor="middle" fill="#999999" fontSize="11">
-                    (Reason)
-                  </text>
-
-                  <rect x="220" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
-                  <text x="255" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
-                    Neuron
-                  </text>
-                  <text x="255" y="95" textAnchor="middle" fill="#999999" fontSize="11">
-                    (Action)
-                  </text>
-
-                  {/* Arrows connecting neurons */}
-                  <line x1="80" y1="90" x2="115" y2="90" stroke="#FF00FF" strokeWidth="2" />
-                  <polygon points="115,90 110,87 110,93" fill="#FF00FF" />
-
-                  <line x1="185" y1="90" x2="220" y2="90" stroke="#FF00FF" strokeWidth="2" />
-                  <polygon points="220,90 215,87 215,93" fill="#FF00FF" />
-                </svg>
-              </div>
             </div>
           </div>
 
+          {/* Added Circuit Diagram */}
+          <div className="mt-12 rounded-2xl border border-[#FFFF00]/30 bg-gradient-to-br from-[#78350F]/20 to-black p-8">
+            <svg
+              className="w-full max-h-60 sm:max-h-72 lg:max-h-80"
+              viewBox="0 0 300 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Circuit label at bottom */}
+              <text x="150" y="190" textAnchor="middle" className="text-xs" fill="#FFFF00" fontSize="12">
+                └────────────── Circuit ──────────────┘
+              </text>
+
+              {/* Neuron boxes */}
+              <rect x="10" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
+              <text x="45" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
+                Neuron
+              </text>
+              <text x="45" y="95" textAnchor="middle" fill="#999999" fontSize="11">
+                (Input)
+              </text>
+
+              <rect x="115" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
+              <text x="150" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
+                Neuron
+              </text>
+              <text x="150" y="95" textAnchor="middle" fill="#999999" fontSize="11">
+                (Reason)
+              </text>
+
+              <rect x="220" y="50" width="70" height="80" fill="none" stroke="#00FFFF" strokeWidth="2" rx="4" />
+              <text x="255" y="75" textAnchor="middle" fill="#00FFFF" fontSize="13" fontWeight="bold">
+                Neuron
+              </text>
+              <text x="255" y="95" textAnchor="middle" fill="#999999" fontSize="11">
+                (Action)
+              </text>
+
+              {/* Arrows connecting neurons */}
+              <line x1="80" y1="90" x2="115" y2="90" stroke="#FF00FF" strokeWidth="2" />
+              <polygon points="115,90 110,87 110,93" fill="#FF00FF" />
+
+              <line x1="185" y1="90" x2="220" y2="90" stroke="#FF00FF" strokeWidth="2" />
+              <polygon points="220,90 215,87 215,93" fill="#FF00FF" />
+            </svg>
+          </div>
+
           <div className="mt-12 rounded-2xl border border-[#00FFFF]/30 bg-gradient-to-br from-[#0E7490]/20 to-black p-8 lg:p-12">
-            <h4 className="text-2xl font-bold text-white mb-6">What this allows Synaptic to move AI execution</h4>
+            <h4 className="text-2xl font-bold text-white mb-6">Synaptic moves AI execution</h4>
 
             <ul className="space-y-3 text-lg text-gray-300">
               <li className="flex items-start gap-3">
