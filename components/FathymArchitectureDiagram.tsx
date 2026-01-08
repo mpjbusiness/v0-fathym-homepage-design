@@ -2,12 +2,19 @@
 
 export default function FathymArchitectureDiagram() {
   return (
-    <div className="w-full bg-gradient-to-b from-black via-[#0F172A] to-black py-12 px-6">
+    <div className="w-full bg-gradient-to-b from-black via-[#0F172A] to-black py-8 sm:py-12 px-4 sm:px-6">
       <div className="mx-auto max-w-6xl">
         {/* Diagram Container */}
-        <div className="relative rounded-xl border border-[#00FFFF]/20 bg-black/60 backdrop-blur p-8 overflow-x-auto">
-          {/* SVG Diagram */}
-          <svg viewBox="0 0 800 900" className="w-full min-w-max" style={{ minHeight: "600px" }}>
+        <div className="relative rounded-xl border border-[#00FFFF]/20 bg-black/60 backdrop-blur p-4 sm:p-6 lg:p-8">
+          <svg
+            viewBox="0 0 800 900"
+            className="mx-auto w-full max-w-4xl"
+            preserveAspectRatio="xMidYMid meet"
+            style={{
+              minHeight: "500px",
+              height: "auto",
+            }}
+          >
             {/* AI Code Generation Box */}
             <rect x="150" y="20" width="500" height="80" fill="none" stroke="#FF00FF" strokeWidth="2" rx="4" />
             <text x="400" y="50" textAnchor="middle" fill="#FF00FF" fontSize="16" fontWeight="bold">
@@ -133,8 +140,8 @@ export default function FathymArchitectureDiagram() {
         </div>
 
         {/* Description */}
-        <div className="mt-8 text-center">
-          <p className="text-gray-300 text-sm">
+        <div className="mt-6 sm:mt-8 text-center px-2">
+          <p className="text-gray-300 text-xs sm:text-sm">
             The Fathym architecture enables AI-generated code to flow through a coherent stewardship layer, with
             declarative configuration, composable runtimes, and enterprise-ready governance.
           </p>
