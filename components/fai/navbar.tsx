@@ -1,17 +1,27 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export function Navbar() {
+  const pathname = usePathname()
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-[18px] md:px-12 bg-[rgba(7,10,13,0.85)] backdrop-blur-[20px] border-b border-border">
-      <div className="text-[19px] font-black tracking-tight bg-gradient-to-br from-neon-cyan-400 to-neon-green-400 bg-clip-text text-transparent">
+      <Link
+        href="/"
+        className="text-[19px] font-black tracking-tight bg-gradient-to-br from-neon-cyan-400 to-neon-green-400 bg-clip-text text-transparent"
+      >
         ^AI
-      </div>
+      </Link>
       <div className="flex items-center gap-8">
         <Link
-          href="#how"
-          className="hidden md:inline text-muted-foreground text-sm font-medium hover:text-foreground transition-colors"
+          href="/how-it-works"
+          className={`hidden md:inline text-sm font-medium transition-colors ${
+            pathname === "/how-it-works"
+              ? "text-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
         >
           How it works
         </Link>

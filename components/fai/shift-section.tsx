@@ -3,7 +3,7 @@ export function ShiftSection() {
     <section id="shift" className="bg-background-secondary py-[100px] px-6">
       <div className="max-w-[860px] mx-auto">
         <div className="text-[11px] font-bold tracking-[0.16em] uppercase text-neon-cyan-400 opacity-70 text-center mb-5">
-          The shift
+          What changed
         </div>
 
         {/* Two-column grid */}
